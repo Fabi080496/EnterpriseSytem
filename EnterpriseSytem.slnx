@@ -1,1 +1,7 @@
-<Solution />
+<Solution>
+  <Folder Name="/Api/">
+    <Project Path="src/Api/EnterpriseSytem.Api/EnterpriseSytem.Api.csproj" Id="9513168f-4c96-4cb1-aeb3-99d3c8964a4c" />
+  </Folder>
+  <Folder Name="/Modules/" />
+  <Folder Name="/Shared/" />
+</Solution>
