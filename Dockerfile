@@ -4,19 +4,16 @@
 FROM mcr.microsoft.com/dotnet/sdk:10.0-preview AS build
 WORKDIR /src
 
-# Copiar solución
-COPY EnterpriseSytem.sln ./
-
 # Copiar csproj de la API
 COPY src/Api/EnterpriseSytem.Api/EnterpriseSytem.Api.csproj src/Api/EnterpriseSytem.Api/
 
 # Restaurar dependencias
 RUN dotnet restore src/Api/EnterpriseSytem.Api/EnterpriseSytem.Api.csproj
 
-# Copiar todo el código
+# Copiar el resto del código
 COPY src/ src/
 
-# Publicar SOLO la API
+# Publicar la API
 RUN dotnet publish src/Api/EnterpriseSytem.Api/EnterpriseSytem.Api.csproj -c Release -o /app/publish
 
 # =========================
