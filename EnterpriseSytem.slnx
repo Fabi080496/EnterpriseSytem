@@ -3,5 +3,8 @@
     <Project Path="src/Api/EnterpriseSytem.Api/EnterpriseSytem.Api.csproj" Id="9513168f-4c96-4cb1-aeb3-99d3c8964a4c" />
   </Folder>
   <Folder Name="/Modules/" />
-  <Folder Name="/Shared/" />
+  <Folder Name="/Shared/">
+    <Project Path="src/Shared/EnterpriseSystem.Shared/EnterpriseSystem.Shared.csproj" Id="b1abea9d-fab3-42bc-8235-094f0e495620" />
+    <Project Path="src/Shared/EnterpriseSytem.Shared.Contracts/EnterpriseSytem.Shared.Contracts.csproj" Id="9a8764f7-b24a-4da6-9572-d39e4c1a7a8c" />
+  </Folder>
 </Solution>
