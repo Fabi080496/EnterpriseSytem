@@ -1,7 +1,10 @@
 <Solution>
-  <Folder Name="/api-contract/">
+  <Folder Name="/Api Contract/">
     <File Path="api-contract/openapi.yaml" />
   </Folder>
+  <Folder Name="/Api Contract/Examples/" />
+  <Folder Name="/Api Contract/Paths/" />
+  <Folder Name="/Api Contract/Schemas/" />
   <Folder Name="/src/" />
   <Folder Name="/src/Api/">
     <Project Path="src/Api/EnterpriseSytem.Api/EnterpriseSytem.Api.csproj" Id="9513168f-4c96-4cb1-aeb3-99d3c8964a4c" />
