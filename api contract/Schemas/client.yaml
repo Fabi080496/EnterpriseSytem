@@ -1,0 +1,24 @@
+Client:
+  type: object
+  required: [id, name, email]
+  properties:
+    id:
+      type: integer
+    name:
+      type: string
+    email:
+      type: string
+
+ClientList:
+  type: array
+  items:
+    $ref: '#/Client'
+
+CreateClient:
+  type: object
+  required: [name, email]
+  properties:
+    name:
+      type: string
+    email:
+      type: string
