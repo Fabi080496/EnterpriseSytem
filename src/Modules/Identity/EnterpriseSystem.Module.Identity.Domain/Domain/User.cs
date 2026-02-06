@@ -1,0 +1,25 @@
+﻿using EnterpriseSystem.Shared.DDD;
+
+namespace EnterpriseSystem.Module.Identity.Domain.Domain
+{
+    public class User : Aggregate<Guid>
+    {
+        public string Name { get; private set; }
+        public string LastName { get; private set; }
+        public string DocumentType { get; private set; }
+        public string DocumentNumber { get; private set; }
+        public string Email { get; private set; }
+
+        private User() { } 
+
+        public User(Guid id, string name,string lastName,string documentType,string documentNumber,string email)
+        {
+            Id = id;
+            Name = name;
+            LastName = lastName;
+            DocumentType = documentType;
+            DocumentNumber = documentNumber;
+            Email = email;
+        }
+    }
+}

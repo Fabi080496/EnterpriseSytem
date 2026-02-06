@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\EnterpriseSystem.Shared\EnterpriseSystem.Shared.csproj" />
+    <ProjectReference Include="..\..\..\Shared\EnterpriseSytem.Shared.Contracts\EnterpriseSytem.Shared.Contracts.csproj" />
+    <ProjectReference Include="..\EnterpriseSystem.Module.Identity.Domain\EnterpriseSystem.Module.Identity.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

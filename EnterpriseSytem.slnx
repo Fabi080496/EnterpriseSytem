@@ -4,6 +4,11 @@
     <Project Path="src/Api/EnterpriseSytem.Api/EnterpriseSytem.Api.csproj" Id="9513168f-4c96-4cb1-aeb3-99d3c8964a4c" />
   </Folder>
   <Folder Name="/src/Modules/" />
+  <Folder Name="/src/Modules/Identity/">
+    <Project Path="src/Modules/Identity/EnterpriseSystem.Module.Identity.Application/EnterpriseSystem.Module.Identity.Application.csproj" Id="59fa8c21-b7fa-4b05-a03d-7ce52dcf1fad" />
+    <Project Path="src/Modules/Identity/EnterpriseSystem.Module.Identity.Domain/EnterpriseSystem.Module.Identity.Domain.csproj" Id="c5d0e4f8-ed9e-493f-81a8-0cb4523355ae" />
+    <Project Path="src/Modules/Identity/EnterpriseSystem.Module.Identity.Infraestructure/EnterpriseSystem.Module.Identity.Infraestructure.csproj" Id="4abc4a26-f085-471d-ae39-310e8bc54eab" />
+  </Folder>
   <Folder Name="/src/Shared/">
     <Project Path="src/Shared/EnterpriseSystem.Shared/EnterpriseSystem.Shared.csproj" Id="b1abea9d-fab3-42bc-8235-094f0e495620" />
     <Project Path="src/Shared/EnterpriseSytem.Shared.Contracts/EnterpriseSytem.Shared.Contracts.csproj" Id="9a8764f7-b24a-4da6-9572-d39e4c1a7a8c" />
