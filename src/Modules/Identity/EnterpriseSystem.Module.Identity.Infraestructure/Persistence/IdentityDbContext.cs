@@ -12,6 +12,7 @@ namespace EnterpriseSystem.Module.Identity.Infraestructure.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.HasDefaultSchema("identity");
             modelBuilder.ApplyConfigurationsFromAssembly(
                 typeof(IdentityDbContext).Assembly);
         }

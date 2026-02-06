@@ -1,6 +1,7 @@
 ﻿using EnterpriseSystem.Module.Identity.Domain.Domain;
 using EnterpriseSystem.Module.Identity.Domain.Interfaces;
 using MediatR;
+using System.Xml.Linq;
 
 namespace EnterpriseSystem.Module.Identity.Application.Command.User_Create
 {
@@ -18,7 +19,7 @@ namespace EnterpriseSystem.Module.Identity.Application.Command.User_Create
             CreateUserCommand request,
             CancellationToken cancellationToken)
         {
-            var user = new User(Guid.NewGuid(),request.Email);
+            var user = new User(Guid.NewGuid(),request.Name,request.LastName,request.DocumentType,request.DocumentNumber, request.Email);
             await _repository.AddAsync(user);
             return user.Id;
         }

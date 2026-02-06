@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EnterpriseSystem.Module.Identity.Application\EnterpriseSystem.Module.Identity.Application.csproj" />
     <ProjectReference Include="..\EnterpriseSystem.Module.Identity.Domain\EnterpriseSystem.Module.Identity.Domain.csproj" />
   </ItemGroup>
 
