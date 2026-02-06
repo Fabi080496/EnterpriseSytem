@@ -7,15 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.15.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Modules\Identity\EnterpriseSystem.Module.Identity.Application\EnterpriseSystem.Module.Identity.Application.csproj" />
+    <ProjectReference Include="..\..\Modules\Identity\EnterpriseSystem.Module.Identity.Infraestructure\EnterpriseSystem.Module.Identity.Infraestructure.csproj" />
   </ItemGroup>
 
 </Project>

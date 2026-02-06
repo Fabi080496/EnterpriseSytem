@@ -1,5 +1,5 @@
-﻿using EnterpriseSystem.Module.Identity.Application.Command;
-using EnterpriseSystem.Module.Identity.Application.Querys.GetByUser;
+﻿using EnterpriseSystem.Module.Identity.Application.User.Command.Create;
+using EnterpriseSystem.Module.Identity.Application.User.Querys.GetBy;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

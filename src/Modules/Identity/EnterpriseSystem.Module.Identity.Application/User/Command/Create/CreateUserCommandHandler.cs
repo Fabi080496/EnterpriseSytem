@@ -3,7 +3,7 @@ using EnterpriseSystem.Module.Identity.Domain.Interfaces;
 using MediatR;
 using System.Xml.Linq;
 
-namespace EnterpriseSystem.Module.Identity.Application.Command.User_Create
+namespace EnterpriseSystem.Module.Identity.Application.User.Command.Create
 {
     public class CreateUserCommandHandler
         : IRequestHandler<CreateUserCommand, Guid>

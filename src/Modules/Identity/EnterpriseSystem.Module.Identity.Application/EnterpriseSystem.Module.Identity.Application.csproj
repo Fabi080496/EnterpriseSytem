@@ -10,7 +10,10 @@
     <ProjectReference Include="..\..\..\Shared\EnterpriseSystem.Shared\EnterpriseSystem.Shared.csproj" />
     <ProjectReference Include="..\..\..\Shared\EnterpriseSytem.Shared.Contracts\EnterpriseSytem.Shared.Contracts.csproj" />
     <ProjectReference Include="..\EnterpriseSystem.Module.Identity.Domain\EnterpriseSystem.Module.Identity.Domain.csproj" />
-    <ProjectReference Include="..\EnterpriseSystem.Module.Identity.Infraestructure\EnterpriseSystem.Module.Identity.Infraestructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Login\Query\" />
   </ItemGroup>
 
 </Project>

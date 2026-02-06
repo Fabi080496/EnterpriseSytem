@@ -9,10 +9,11 @@ namespace EnterpriseSystem.Module.Identity.Domain.Domain
         public string DocumentType { get; private set; }
         public string DocumentNumber { get; private set; }
         public string Email { get; private set; }
+        public string Password { get; private set; }
 
         private User() { } 
 
-        public User(Guid id, string name,string lastName,string documentType,string documentNumber,string email)
+        public User(Guid id, string name,string lastName,string documentType,string documentNumber,string email,string password)
         {
             Id = id;
             Name = name;
@@ -20,6 +21,7 @@ namespace EnterpriseSystem.Module.Identity.Domain.Domain
             DocumentType = documentType;
             DocumentNumber = documentNumber;
             Email = email;
+            Password = password;
         }
     }
 }
