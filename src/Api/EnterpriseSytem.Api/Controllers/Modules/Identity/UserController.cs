@@ -20,6 +20,7 @@ namespace EnterpriseSytem.Api.Controllers.Modules.Identity
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Create(CreateUserCommand command)
         {
             var id = await _mediator.Send(command);
