@@ -32,11 +32,11 @@ builder.Services.AddIdentityInfrastructure(connectionString);
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
-// JWT Options (Binding appsettings)
+// JWT Options
 builder.Services.Configure<JwtOptions>(
     builder.Configuration.GetSection("Jwt"));
 
-//  Authentication + JWT
+// Authentication + JWT
 builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer("Bearer", options =>
     {
@@ -60,6 +60,10 @@ builder.Services.AddAuthentication("Bearer")
 
 builder.Services.AddAuthorization();
 
+//  Exception Handler
+builder.Services.AddExceptionHandler<CustomExceptionHandler>();
+builder.Services.AddProblemDetails();
+
 // =======================================
 // BUILD (PUNTO DE NO RETORNO)
 // =======================================
@@ -75,16 +79,8 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-// Migraciones automáticas (esto SÍ va después de Build)
-//using (var scope = app.Services.CreateScope())
-//{
-//    var db = scope.ServiceProvider
-//        .GetRequiredService<IdentityDbContext>();
-
-//    db.Database.Migrate();
-//}
-builder.Services
-    .AddExceptionHandler<CustomExceptionHandler>();
+// Middleware del exception handler
+app.UseExceptionHandler();
 
 app.UseAuthentication();
 app.UseAuthorization();
