@@ -1,6 +1,7 @@
 using EnterpriseSystem.Module.Identity.Application;
 using EnterpriseSystem.Module.Identity.Infraestructure;
 using EnterpriseSystem.Module.Identity.Infraestructure.Security;
+using EnterpriseSystem.Shared.Exceptions.Handler;
 using EnterpriseSystem.Shared.Extension;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -82,6 +83,8 @@ if (app.Environment.IsDevelopment())
 
 //    db.Database.Migrate();
 //}
+builder.Services
+    .AddExceptionHandler<CustomExceptionHandler>();
 
 app.UseAuthentication();
 app.UseAuthorization();
