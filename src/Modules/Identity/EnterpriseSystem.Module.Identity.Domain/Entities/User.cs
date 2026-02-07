@@ -1,6 +1,6 @@
 ﻿using EnterpriseSystem.Shared.DDD;
 
-namespace EnterpriseSystem.Module.Identity.Domain.Domain
+namespace EnterpriseSystem.Module.Identity.Domain.Entities
 {
     public class User : Aggregate<Guid>
     {
@@ -23,5 +23,26 @@ namespace EnterpriseSystem.Module.Identity.Domain.Domain
             Email = email;
             Password = password;
         }
+
+        public static User Create(
+            string name, 
+            string lastName, 
+            string documentType, 
+            string documentNumber, 
+            string email, 
+            string password)
+        {
+            return new User(
+                Guid.NewGuid(),
+                name,
+                lastName,
+                documentType,
+                documentNumber,
+                email,
+                password
+            );
+        }
+
+
     }
 }

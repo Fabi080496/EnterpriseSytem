@@ -1,4 +1,4 @@
-﻿using EnterpriseSystem.Module.Identity.Domain.Domain;
+﻿using EnterpriseSystem.Module.Identity.Domain.Entities;
 
 namespace EnterpriseSystem.Module.Identity.Domain.Interfaces
 {
@@ -6,5 +6,7 @@ namespace EnterpriseSystem.Module.Identity.Domain.Interfaces
     {
         Task AddAsync(User user);
         Task<User?> GetByIdAsync(Guid id);
+        Task<User?> GetByEmailAsync(string email, CancellationToken ct);
+
     }
 }

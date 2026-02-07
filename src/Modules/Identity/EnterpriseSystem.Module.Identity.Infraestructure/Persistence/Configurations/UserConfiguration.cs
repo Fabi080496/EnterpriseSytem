@@ -1,4 +1,4 @@
-﻿using EnterpriseSystem.Module.Identity.Domain.Domain;
+﻿using EnterpriseSystem.Module.Identity.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

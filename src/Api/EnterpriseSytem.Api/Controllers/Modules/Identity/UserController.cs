@@ -1,12 +1,15 @@
-﻿using EnterpriseSystem.Module.Identity.Application.User.Command.Create;
-using EnterpriseSystem.Module.Identity.Application.User.Querys.GetBy;
+﻿using EnterpriseSystem.Module.Identity.Application.Users.Command.Create;
+using EnterpriseSystem.Module.Identity.Application.Users.Querys.GetBy;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EnterpriseSytem.Api.Controllers.Modules.Identity
 {
+    
     [ApiController]
-    [Route("User")]
+    [Route("user")]
+    [Authorize]
     public class UserController : Controller
     {
         private readonly IMediator _mediator;

@@ -1,4 +1,4 @@
-﻿using EnterpriseSystem.Module.Identity.Domain.Domain;
+﻿using EnterpriseSystem.Module.Identity.Domain.Entities;
 using EnterpriseSystem.Module.Identity.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -26,5 +26,18 @@ namespace EnterpriseSystem.Module.Identity.Infraestructure.Persistence.Repositor
                 .AsNoTracking()
                 .FirstOrDefaultAsync(x => x.Id == id);
         }
+
+        public async Task<User?> GetByEmailAsync(
+            string email,
+            CancellationToken ct)
+        {
+            return await _context.Users
+                .AsNoTracking()
+                .FirstOrDefaultAsync(
+                    u => u.Email == email,
+                    ct);
+        }
+
+
     }
 }

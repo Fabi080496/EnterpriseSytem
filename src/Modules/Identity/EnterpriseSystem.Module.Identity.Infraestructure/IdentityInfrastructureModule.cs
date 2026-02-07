@@ -1,8 +1,9 @@
-﻿using EnterpriseSystem.Module.Identity.Application.Security;
-using EnterpriseSystem.Module.Identity.Domain.Interfaces;
+﻿using EnterpriseSystem.Module.Identity.Domain.Interfaces;
 using EnterpriseSystem.Module.Identity.Infraestructure.Jwt;
 using EnterpriseSystem.Module.Identity.Infraestructure.Persistence;
 using EnterpriseSystem.Module.Identity.Infraestructure.Persistence.Repository;
+using EnterpriseSystem.Module.Identity.Infraestructure.Security;
+using EnterpriseSystem.Shared.Security;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -17,6 +18,7 @@ namespace EnterpriseSystem.Module.Identity.Infraestructure
 
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
+            services.AddScoped<IPasswordHasher, PasswordHasher>();
 
             return services;
         }

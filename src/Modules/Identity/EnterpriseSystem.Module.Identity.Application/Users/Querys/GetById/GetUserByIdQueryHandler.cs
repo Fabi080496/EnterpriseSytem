@@ -1,6 +1,6 @@
 ﻿using EnterpriseSystem.Module.Identity.Domain.Interfaces;
 using MediatR;
-namespace EnterpriseSystem.Module.Identity.Application.User.Querys.GetBy
+namespace EnterpriseSystem.Module.Identity.Application.Users.Querys.GetBy
 {
     public class GetUserByIdQueryHandler
         : IRequestHandler<GetUserByIdQuery, UserDto?>
