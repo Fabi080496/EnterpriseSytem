@@ -13,12 +13,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.15.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.16.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Modules\Identity\EnterpriseSystem.Module.Identity.Application\EnterpriseSystem.Module.Identity.Application.csproj" />
-    <ProjectReference Include="..\..\Modules\Identity\EnterpriseSystem.Module.Identity.Infraestructure\EnterpriseSystem.Module.Identity.Infraestructure.csproj" />
+    <ProjectReference Include="..\..\Modules\Identity\EnterpriseSystem.Module.Identity\EnterpriseSystem.Module.Identity.csproj" />
   </ItemGroup>
 
 </Project>

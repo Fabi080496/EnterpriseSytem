@@ -1,5 +1,4 @@
-using EnterpriseSystem.Module.Identity.Application;
-using EnterpriseSystem.Module.Identity.Infraestructure;
+using EnterpriseSystem.Module.Identity;
 using EnterpriseSystem.Module.Identity.Infraestructure.Security;
 using EnterpriseSystem.Shared.Exceptions.Handler;
 using EnterpriseSystem.Shared.Extension;
@@ -20,13 +19,17 @@ var connectionString =
 // SERVICIOS (ANTES DE Build)
 // =======================================
 
-// MediatR (Application)
-builder.Services.AddMediatRWithAssemblies(
-    typeof(IdentityApplicationAssemblyMarker).Assembly
-);
+// COMMON SERVICES
+var identityAssembly = typeof(IdentityModule).Assembly;
 
-// Infrastructure
-builder.Services.AddIdentityInfrastructure(connectionString);
+
+builder.Services
+    .AddMediatRWithAssemblies(identityAssembly);
+
+
+builder.Services.AddIndentityModule(builder.Configuration);
+
+
 
 // Controllers + OpenAPI
 builder.Services.AddControllers();
