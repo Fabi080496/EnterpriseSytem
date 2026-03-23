@@ -4,8 +4,8 @@
     <Project Path="src/Api/EnterpriseSytem.Api/EnterpriseSytem.Api.csproj" Id="9513168f-4c96-4cb1-aeb3-99d3c8964a4c" />
   </Folder>
   <Folder Name="/src/Modules/" />
-  <Folder Name="/src/Modules/Identity/">
-    <Project Path="src/Modules/Identity/EnterpriseSystem.Module.Identity/EnterpriseSystem.Module.Identity.csproj" Id="b46f53cf-4310-4882-88a5-c9ad9f3b5579" />
+  <Folder Name="/src/Modules/Organization/">
+    <Project Path="src/Modules/Company/EnterpriseSystem.Module.Company/EnterpriseSystem.Module.Organization.csproj" Id="f49b3bcc-018e-4ba7-8b70-56e18d0a9f69" />
   </Folder>
   <Folder Name="/src/Shared/">
     <Project Path="src/Shared/EnterpriseSystem.Shared/EnterpriseSystem.Shared.csproj" Id="b1abea9d-fab3-42bc-8235-094f0e495620" />
