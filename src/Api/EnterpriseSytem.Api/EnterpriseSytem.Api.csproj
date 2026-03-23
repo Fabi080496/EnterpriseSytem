@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\Company\" />
+    <ProjectReference Include="..\..\Modules\Company\EnterpriseSystem.Module.Company\EnterpriseSystem.Module.Organization.csproj" />
   </ItemGroup>
 
 </Project>

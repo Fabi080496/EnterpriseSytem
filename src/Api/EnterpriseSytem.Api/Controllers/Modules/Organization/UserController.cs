@@ -1,10 +1,10 @@
-﻿using EnterpriseSystem.Module.Identity.Application.Users.Command.Create;
-using EnterpriseSystem.Module.Identity.Application.Users.Querys.GetBy;
+﻿using EnterpriseSystem.Module.Organization.Application.Users.Command.Create;
+using EnterpriseSystem.Module.Organization.Application.Users.Querys.GetBy;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EnterpriseSytem.Api.Controllers.Modules.Identity
+namespace EnterpriseSytem.Api.Controllers.Modules.Organization
 {
     
     [ApiController]

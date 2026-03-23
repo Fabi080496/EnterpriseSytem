@@ -1,0 +1,7 @@
+﻿using MediatR;
+
+namespace EnterpriseSystem.Module.Organization.Application.Users.Command.Create
+{
+    public record CreateUserCommand(string Name,string LastName, string DocumentType, string DocumentNumber,string Email,string Password)
+        : IRequest<Guid>;
+}

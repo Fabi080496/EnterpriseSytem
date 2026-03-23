@@ -1,5 +1,5 @@
-using EnterpriseSystem.Module.Identity;
-using EnterpriseSystem.Module.Identity.Infraestructure.Security;
+using EnterpriseSystem.Module.Organization;
+using EnterpriseSystem.Module.Organization.Infraestructure.Security;
 using EnterpriseSystem.Shared.Exceptions.Handler;
 using EnterpriseSystem.Shared.Extension;
 using Microsoft.EntityFrameworkCore;
@@ -9,18 +9,15 @@ using System.Text;
 // Configuration Builder
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-
-
 
 
 // Configuration Service (DI)
-var identityAssembly = typeof(IdentityModule).Assembly;
+var identityAssembly = typeof(OrganizationModule).Assembly;
 
 
 builder.Services.AddMediatRWithAssemblies(identityAssembly);
 
-builder.Services.AddIndentityModule(builder.Configuration);
+builder.Services.AddOrganizationModule(builder.Configuration);
 
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();

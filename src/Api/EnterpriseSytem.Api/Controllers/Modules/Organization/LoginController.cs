@@ -1,4 +1,4 @@
-﻿using EnterpriseSystem.Module.Identity.Application.Login.Command;
+﻿using EnterpriseSystem.Module.Organization.Application.Login.Command;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
