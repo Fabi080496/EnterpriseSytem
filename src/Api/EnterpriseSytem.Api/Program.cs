@@ -2,7 +2,6 @@ using EnterpriseSystem.Module.Organization;
 using EnterpriseSystem.Module.Organization.Infraestructure.Security;
 using EnterpriseSystem.Shared.Exceptions.Handler;
 using EnterpriseSystem.Shared.Extension;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
@@ -12,10 +11,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 // Configuration Service (DI)
-var identityAssembly = typeof(OrganizationModule).Assembly;
+var organizationAssembly = typeof(OrganizationModule).Assembly;
 
 
-builder.Services.AddMediatRWithAssemblies(identityAssembly);
+builder.Services.AddMediatRWithAssemblies(organizationAssembly);
 
 builder.Services.AddOrganizationModule(builder.Configuration);
 

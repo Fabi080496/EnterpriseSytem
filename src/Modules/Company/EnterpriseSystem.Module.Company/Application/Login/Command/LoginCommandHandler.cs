@@ -1,5 +1,6 @@
 ﻿using EnterpriseSystem.Module.Organization.Domain.Interfaces;
 using EnterpriseSystem.Module.Organization.Domain.Interfaces.Security;
+using EnterpriseSystem.Shared.Exceptions;
 using MediatR;
 
 
@@ -25,12 +26,12 @@ namespace EnterpriseSystem.Module.Organization.Application.Login.Command
                 .GetByEmailAsync(request.Email, cancellationToken);
 
             if (user is null)
-                throw new UnauthorizedAccessException("Credenciales inválidas");
+                throw new UnauthorizedException("Credenciales inválidas");
 
             if (!_passwordHasher.Verify(
                 request.Password,
                 user.Password))
-                throw new UnauthorizedAccessException("Credenciales inválidas");
+                throw new UnauthorizedException("Credenciales inválidas");
 
             var token = _jwt.GenerateToken(
                 user.Id,

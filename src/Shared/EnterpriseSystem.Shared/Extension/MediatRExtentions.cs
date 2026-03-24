@@ -10,6 +10,7 @@ namespace EnterpriseSystem.Shared.Extension
     {
         public static IServiceCollection AddMediatRWithAssemblies (this IServiceCollection services, params Assembly[] assemblies)
         {
+
             services.AddMediatR(config =>
             {
                 config.RegisterServicesFromAssemblies(assemblies);
@@ -20,6 +21,7 @@ namespace EnterpriseSystem.Shared.Extension
             services.AddValidatorsFromAssemblies(assemblies);
 
             return services;
+
         }
     }
 }

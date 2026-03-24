@@ -39,6 +39,11 @@ namespace EnterpriseSystem.Module.Organization.Infraestructure.Persistence.Repos
                     ct);
         }
 
-
+        public async Task<bool> ExistsByEmailAsync(string email, CancellationToken cancellationToken)
+        {
+            return await _context.Users
+                .AsNoTracking()
+                .AnyAsync(x => x.Email == email, cancellationToken);
+        }
     }
 }

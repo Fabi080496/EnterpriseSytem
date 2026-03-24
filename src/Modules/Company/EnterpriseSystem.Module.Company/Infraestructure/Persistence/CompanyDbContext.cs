@@ -14,13 +14,11 @@ namespace EnterpriseSystem.Module.Organization.Infrastructure.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>().ToTable("user");
-            modelBuilder.Entity<Company>().ToTable("company");
-
             modelBuilder.HasDefaultSchema("organization");
 
             modelBuilder.ApplyConfigurationsFromAssembly(
                 typeof(CompanyDbContext).Assembly);
+
         }
 
 
